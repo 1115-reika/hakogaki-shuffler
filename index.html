@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>箱書きシャッフラー</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="styles_sp.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    </head>
+    <body>
+        <header>
+            <section>
+            <a href="index.html"><img class="logo" src="img/logo.svg" alt="サイトロゴ"></a>  
+            <div class="pc_menu"><a href="explanation.html" class="whats">このサイトとは？</a></div>
+                    <!--スマホ用-->
+        <div class="sp_menu">
+            <div class="hamburger js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+            <li><a href="explanation.html" class="whats">このサイトとは？</a></li>
+            </ul>
+        </div>
+            </section>
+
+        </header>
+        <main>
+            <form id="shuffleForm">
+             <section>
+                 
+                    <div class="tab_a"><h2>箱の中身を作ろう</h2><button id="addBox" class="plus_b" type="button">+</button></div>
+                     <div class="scene">
+                        <div id="boxContainer" class="con">
+                            <textarea placeholder="シーン1"></textarea>
+                            <textarea placeholder="シーン2"></textarea>
+                            <textarea placeholder="シーン3"></textarea>
+                            <textarea placeholder="シーン4"></textarea>
+                        </div>
+                    
+                    </div>
+                 <!--モーダル-->
+        <div id="modal" class="modal">
+                <div class="con">
+                <h2>箱書きの中身を仕上げよう</h2>
+                    <div class="modal-wrapper">
+                    <textarea id="modalTextarea" placeholder="ここに書いて"></textarea>
+                    <button id="saveBtn" class="main_b" type="button">保存</button>
+                    </div>
+                </div>
+                </div>
+                    
+                        <button onclick="clickDisplayAlert()" class="main_b" type="button">シャッフルする！</button>
+                   
+             </section>
+            </form>
+            
+        <div id="kekka">
+            <!-- デフォルトで1個表示 -->
+            <section>
+                <div class="check">
+                    <label class="checkbox">
+                        <input type="checkbox" id="check-default" checked>
+                        <span class="custom"></span>
+                    </label>
+                </div>
+                <details open>
+                    <summary class="tab_b">
+                    <h2>シャッフル案<span>1</span></h2>
+                    <span class="position arrow"></span>
+                    </summary>
+      <div class="scene">
+        <div class="con">
+          <textarea placeholder="シーン1" readonly></textarea>
+          <textarea placeholder="シーン2" readonly></textarea>
+          <textarea placeholder="シーン3" readonly></textarea>
+          <textarea placeholder="シーン4" readonly></textarea>
+        </div>
+      </div>
+    </details>
+  </section>
+</div>
+            
+
+             <button class="main_b" onclick="downloadTextFile()" type="button">選択したものをテキストファイルにする</button>
+
+        </main>
+        <footer>
+           <section>Copyright ©　箱書きシャッフラー</section>
+        </footer>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script> 
+    </body>
+   
+</html>

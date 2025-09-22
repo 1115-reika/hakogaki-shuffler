@@ -1,0 +1,142 @@
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+    header .pc_menu {
+    display: none;
+}
+
+   .logo{ max-width:7.45375rem;}
+
+   .sp_menu {
+    display:block;
+  position: fixed;
+  top: 0;
+  right: -100%; /* 初期状態では画面の外に隠れている */
+  width: 300px;
+  height: 100%;
+  background-color: #E5EEF4;
+  color:#333;
+  transition: right 0.3s ease; /* スライドインのアニメーション */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+/* メニューが開いているとき */
+.sp_menu.open {
+  right: 0;
+}
+
+/* ボタンのスタイル */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #0096FA;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* メニューリストのスタイル */
+.sp_menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 80px;
+}
+
+.sp_menu li {
+  padding: 20px 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.sp_menu li a {
+  color: #0096FA;
+  text-decoration: none;
+  display: block;
+}
+
+/* メイン */
+
+main {
+    padding: 0.6875rem 0px;
+}
+
+.tab_a{
+  padding: 0.8125rem;
+}
+
+
+/* 横スクロールコンテナの設定 */
+    .scene {
+      padding: 1.0625rem 0px 1.0625rem 0px;
+        overflow-x: auto; /* 横方向のスクロールを有効にする */
+        overflow-y: hidden; /* 縦方向のスクロールは無効 */
+        padding: 3.75rem 1rem; /* 左右の余白を調整 */
+    }
+
+    .scene .con {
+        display: flex; /* flexboxで横並び */
+        gap: 1rem; /* textareaの間隔 */
+        width: max-content; /* 内容に応じて幅を調整 */
+        margin: 0; /* 中央寄せを解除 */
+    }
+
+  main textarea {
+    margin: 0px 0.9375rem 0px 0px;
+}
+
+   /* スクロールバーのスタイリング（WebKit系ブラウザ用） */
+    .scene::-webkit-scrollbar {
+        height: 8px; /* スクロールバーの高さ */
+    }
+
+    .scene::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1); /* トラックの色 */
+        border-radius: 4px;
+    }
+
+    .scene::-webkit-scrollbar-thumb {
+        background: #0096FA; /* スクロールハンドルの色 */
+        border-radius: 4px;
+    }
+
+    .scene::-webkit-scrollbar-thumb:hover {
+        background: #0060a0; /* ホバー時の色 */
+    }
+
+
+
+
+.main_b{
+  width:22rem;
+  height: 10.625rem;
+  padding: 0.625rem;
+  
+}
+}
