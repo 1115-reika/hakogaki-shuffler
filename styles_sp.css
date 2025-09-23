@@ -91,6 +91,23 @@ main {
   padding: 0.8125rem;
 }
 
+.checkbox{
+  top:1.875rem;
+  left:0.75rem;
+}
+
+.tab_b{
+  width: 19rem;
+  margin-left: 4.25rem;
+  padding:1.5rem  0.875rem;
+}
+
+
+summary .arrow::after{
+  top: 3.75rem;
+  right: 1rem;
+}
+
 
 /* 横スクロールコンテナの設定 */
     .scene {
